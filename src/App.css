@@ -1,0 +1,123 @@
+:root {
+  --blue: #3D9DE8;
+  --dark-blue: #06273C;
+  --light-blue: #ECF6FF;
+  --page: #F7FAFF;
+  --white: #FFFFFF;
+  --radius: 14px;
+  --pad: 16px;
+  --gap: 18px;
+  --hair: rgba(6,39,60,.12);
+  --hair2: rgba(6,39,60,.18);
+  --shadow: 0 10px 30px rgba(6,39,60,.12);
+  --precall-breif-color: #5de481;
+}
+
+.App {
+  text-align: center;
+  background: var(--page);
+  color: var(--dark-blue);
+  font-family: Arial, sans-serif;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.drawer {
+  background: linear-gradient(135deg, var(--light-blue) 0%, var(--white) 100%);
+  box-shadow: var(--shadow);
+  border-top-left-radius: var(--radius);
+  border-bottom-left-radius: var(--radius);
+  border-left: 4px solid var(--blue);
+  padding: var(--pad);
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+}
+
+.drawer h2 {
+  color: var(--blue);
+  font-weight: 800;
+  font-size: 28px;
+  letter-spacing: 1px;
+}
+
+.drawer button {
+  align-self: flex-end;
+  background: var(--light-blue);
+  border: none;
+  border-radius: 8px;
+  padding: 6px 12px;
+  color: var(--dark-blue);
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 12px;
+}
+
+.drawer .score, .drawer .kpi, .drawer .opportunites, .drawer .risques, .drawer .resume {
+  border-radius: 8px;
+  box-shadow: 0 2px 8px var(--hair);
+  padding: 12px;
+  margin-bottom: 12px;
+}
+
+.drawer .score {
+  background: var(--page);
+  color: var(--dark-blue);
+}
+
+.drawer .kpi, .drawer .opportunites {
+  background: var(--light-blue);
+}
+
+.drawer .risques, .drawer .resume {
+  background: var(--page);
+}
+
+.pill {
+  background: var(--precall-breif-color);
+  color: var(--white);
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-size: .9em;
+  font-weight: 600;
+}
+
+img[alt="Valfred Logo"] {
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  border: 2px solid var(--light-blue);
+}
